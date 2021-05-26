@@ -3,7 +3,7 @@ class Player():
         pass
 
     def get_player_one(self):
-        return imput("Enter a name for player 1: ")
+        return input("Enter a name for player 1: ")
     
     def get_player_two(self):
-        return imput("Enter a name for player 2: ")
+        return input("Enter a name for player 2: ")
