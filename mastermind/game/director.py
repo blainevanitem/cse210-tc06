@@ -16,7 +16,8 @@ class Director():
         self.keep_playing = True
 
     def start_game(self):
-        self._player1 = self._player(get_player_one)
-        self._player2 = self._player(get_player_two)
-        self._checker(get_secret_number)
+        self._player1 = self._player.get_player_one()
+        self._player2 = self._player.get_player_two()
+        self._checker.get_secret_number()
         while(self.keep_playing):
+            self._console.display_board()
