@@ -1,8 +1,8 @@
-from console import Console
-from player import Player
-from checker import Checker
-from roster import Roster
-from guesser import Guesser
+from game.console import Console
+from game.player import Player
+from game.checker import Checker
+from game.roster import Roster
+from game.guesser import Guesser
 
 class Director():
     def __init__(self):
@@ -20,4 +20,5 @@ class Director():
         self._player2 = self._player.get_player_two()
         self._checker.get_secret_number()
         while(self.keep_playing):
-            self._console.display_board()
+            self._console.display_board(self._player1,self._player2,self._guesser._player1_data,self._guesser._player2_data)
+            self.keep_playing = False
