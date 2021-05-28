@@ -21,4 +21,8 @@ class Director():
         self._checker.get_secret_number()
         while(self.keep_playing):
             self._console.display_board(self._player1,self._player2,self._guesser._player1_data,self._guesser._player2_data)
-            self.keep_playing = False
+            self._playerturn = self._roster.playersturn()
+            self._console.display_turn(self._playerturn,self._player1,self._player2)
+            self._guesser.get_guess(self._playerturn,self._player1,self._player2,self._guesser._player1_data,self._guesser._player2_data)
+            self._checker.get_hint(self._playerturn,self._guesser._player1_data,self._guesser._player2_data)
+            self.keep_playing = self._console.final_winner(self.keep_playing,self._guesser._player1_data,self._guesser._player2_data,self._player1,self._player2)
