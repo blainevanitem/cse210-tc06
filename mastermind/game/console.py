@@ -8,8 +8,22 @@ class Console():
         print("Player " + player2 + ": " + player2data[0] + ", " +player2data[1])
         print("--------------------")
 
-    def display_turn(self):
-        pass
+    def display_turn(self,playersturn,player1,player2):
+        if playersturn == 1:
+            print(player1 + " Turn:")
+        else:
+            print(player2 + " Turn:")
 
-    def final_winner(self):
-        pass
+    def final_winner(self,keep_playing,player1data,player2data,player1,player2):
+        if player1data[1] == "xxxx":
+            print("\n" + player1 + " wins!")
+            return False
+
+        elif player2data[1] == "xxxx":
+            print("\n" + player2 + " wins!")
+            return False
+
+        else:
+            return True
+        
+        
