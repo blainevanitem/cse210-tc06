@@ -34,4 +34,5 @@ root                    (project root folder)
 
 ## Authors
 ---
-* # TODO: Add your names and emails here
+* # TODO: Blayne Belisle dragonfireangel@live.com
+Steven Briskey,bri20040@byui.edu
